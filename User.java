@@ -5,9 +5,11 @@ public class User {
     private String username;
     private List<String> followingUsers;
     private List<String> publishedPosts;
+    public Object notifications;
 
     public User(String username) {
         this.username = username;
+      
     }
 
     public List<String> getFollowingUsers() {

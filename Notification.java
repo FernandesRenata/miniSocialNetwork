@@ -4,7 +4,7 @@ public class Notification {
     
     private List<String> notifications;
 
-    public void addNotification(String notification) {
+    public void addNotification(User user, String notification) {
         notifications.add(notification);
     }
 
