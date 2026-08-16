@@ -2,15 +2,13 @@ import java.util.List;
 
 public class User {
     
-    private int userId;
     private String username;
     private List<String> followingUsers;
     private List<String> publishedPosts;
     public Object notifications;
 
-    public User(String username, int userId) {
+    public User(String username) {
         this.username = username;
-        this.userId = userId;
     }
 
     public List<String> getFollowingUsers() {
