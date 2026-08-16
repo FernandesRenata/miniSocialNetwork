@@ -22,8 +22,9 @@ public class User {
         return publishedPosts;
     }
 
-    public void publishPost(String postId) {
-        publishedPosts.add(postId);
+    public void publishPost(String postId, String content) {
+        Post newPost = new Post(postId, content);
+        publishedPosts.add(newPost.getPostId());
     }
 
     public String getUsername() {
