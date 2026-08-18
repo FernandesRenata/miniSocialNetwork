@@ -1,4 +1,3 @@
-import java.util.List;
 import java.util.HashMap;
 import java.util.Scanner;
 
@@ -6,10 +5,10 @@ public class Main {
     
     public static void main(String[] args) {
     
-        int userId = 1;
         String username;
 
-        HashMap<Integer, User> users = new HashMap<>();
+        HashMap<String, User> users = new HashMap<>();
+
         
         Scanner scanner = new Scanner(System.in);
 
@@ -17,20 +16,25 @@ public class Main {
           
             String command = scanner.nextLine();
             String[] parts = command.split(" ");
+            
+            switch(parts[0]){
+                case "END":
+                    break;
 
-            if(parts[0].equals("END")){
-                break;
-            }else if(parts[0].equals("ADD_USER")){
+                case "ADD_USER":
+                 username = parts[1];
+                 User user = new User(username);
+                 
+                 users.put(username, user);
+
+                case "FIND_USERNAME":
                  username = parts[1];
 
-                 User user = new User(username, userId);
-                 
-                 users.put(userId, user);
-
-                 userId++;
+                 users.get(username);
+                
 
             }
-
+            
         }
         
 
